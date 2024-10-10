@@ -4,14 +4,29 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column; /* Empile les éléments verticalement */
     margin: 0;
 }
+
+header {
+    background-color: #212529; /* Fond sombre du header */
+    color: white;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed; /* Rendre le header fixe en haut */
+    top: 0; /* Coller le header tout en haut */
+    left: 0;
+    z-index: 1000; /* S'assurer que le header reste au-dessus du reste */}
+
 .container {
     background-color: #212529; /* Fond sombre pour le container */
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
+
 table {
     color: white; /* Couleur du texte du tableau */
 }

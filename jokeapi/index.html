@@ -5,34 +5,59 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Tableau Centré</title>
         <!-- Lien vers le CDN de Bootstrap -->
+        <!-- Bootstrap est une bibliothèque CSS pour créer des interfaces responsive. Le lien ci-dessous charge les styles Bootstrap depuis un CDN -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        
+        <!-- Lien vers le fichier CSS personnalisé, où tu peux ajouter des styles spécifiques -->
         <link rel="stylesheet" href="style/style.css">
+        
+        <!-- Inclusion d'un fichier JavaScript externe appelé script.js -->
         <script src="js/script.js"></script>
     </head>
+
     <body>
+        
+        <!-- Header : section d'en-tête de la page avec un titre et une description -->
+        <header>
+            <h1>Bienvenue sur le Joke Generator</h1>
+            <p>Obtenez une nouvelle blague en un clic !</p>
+        </header>
 
+        <!-- Container principal qui contient le tableau et le bouton -->
         <div class="container">
-            <h1>Test</h1>
-
-            <div class="text-center">
-                <!-- Bouton vert Bootstrap -->
-                <button id="addJokeButton" class="btn btn-success">Nouvelle Blague</button>        
+            
+            <!-- Centre le tableau dans le conteneur avec text-center -->
+            <div class="text-center">        
+                
+                <!-- Création d'un tableau sombre (table-dark) avec des bandes alternées (table-striped) -->
                 <table class="table table-dark table-striped text-center">
+                    <!-- En-tête du tableau (thead) avec les titres des colonnes -->
                     <thead>
                         <tr>
-                            <th scope="col">Catégorie</th>
-                            <th scope="col">Blague</th>
-                            <th scope="col">Action</th>
+                            <th scope="col">Catégorie</th> <!-- Colonne pour la catégorie de la blague -->
+                            <th scope="col">Blague</th>    <!-- Colonne pour la blague (contenu) -->
+                            <th scope="col">Chute</th>     <!-- Colonne pour la chute (punchline) -->
                         </tr>
                     </thead>
-                    <tbody id="table-body">
 
+                    <!-- Corps du tableau (tbody), qui sera complété dynamiquement via JavaScript -->
+                    <tbody id="table-body">
+                        <!-- Les blagues seront insérées ici via le script JavaScript -->
                     </tbody>
                 </table>
             </div>
 
-        <!-- Lien vers le CDN de Bootstrap JS -->
+            <!-- Div contenant le bouton, alignée à droite grâce à text-end -->
+            <div class="text-end">
+                <!-- Bouton vert Bootstrap, qui déclenche une nouvelle blague quand il est cliqué -->
+                <button id="addJokeButton" class="btn btn-success">Nouvelle Blague</button>
+            </div>
+        </div>
+
+        <!-- Lien vers le CDN de Bootstrap JS, qui permet d'activer certaines fonctionnalités interactives de Bootstrap comme les modals ou dropdowns -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Inclusion d'un fichier JavaScript externe pour la gestion des interactions de la page -->
         <script src="assets/script.js"></script>
     </body>
-</html>
+</html> 
